@@ -280,6 +280,14 @@ legend {
   content: "";
 }
 
+body {
+  background: url(../../images/m.jpg) no-repeat 0 0;
+  background-size: 100% auto;
+}
+body .wrap {
+  opacity: 0.7;
+}
+
 .main {
   height: 100px;
 }
@@ -292,31 +300,76 @@ legend {
   padding: 0 4%;
 }
 
-#header {
-  border-bottom: 1px solid #000;
+.section-contents {
+  position: relative;
 }
-#header .inner {
+.section-contents img {
+  width: 100%;
+  height: 560px;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+.section-contents p {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 40px;
+  font-style: normal;
+  font-weight: 700;
+  width: 90%;
+  color: #fff;
+}
+
+#header {
   display: flex;
-  align-items: center;
   justify-content: space-between;
-  height: 70px;
+}
+#header .logo1 {
+  padding-bottom: 5px;
+  font-family: "Noto Serif KR", serif;
+  font-weight: 900;
+  font-size: 36px;
 }
 #header .lst-util {
   display: flex;
 }
 #header .lst-util .btn-g {
-  width: 40px;
-  height: 70px;
+  padding: 15px 0 0 10px;
+  width: 31px;
+  height: 64px;
 }
 #header .lst-util .btn-g::before {
-  font-size: 20px;
+  font-size: 23px;
   font-family: "Font Awesome 6 Free";
 }
 #header .lst-util .btn-search::before {
   content: "\f002";
   font-weight: 900;
 }
-#header .lst-util .btn-burger::before {
-  content: "\f007";
+#header .gnb {
+  margin: 0 20px;
+}
+#header .gnb .depth1 {
+  display: flex;
+  justify-content: space-between;
+  padding-bottom: 9.5px;
+  font-size: 15px;
   font-weight: 400;
+  font-family: "Noto Sans KR", sans-serif;
+}
+#header .gnb li {
+  padding-right: 33.5px;
+  padding-top: 11px;
+}
+#header .slide-wrap {
+  display: block;
+}
+#header .slide-wrap img {
+  -o-object-fit: cover;
+     object-fit: cover;
+  -o-object-position: 50% 77%;
+     object-position: 50% 77%;
+  width: 375px;
+  height: 250px;
 }/*# sourceMappingURL=comm.css.map */
