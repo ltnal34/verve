@@ -280,14 +280,6 @@ legend {
   content: "";
 }
 
-body {
-  background: url(../../images/m.jpg) no-repeat 0 0;
-  background-size: 100% auto;
-}
-body .wrap {
-  opacity: 0.7;
-}
-
 .main {
   height: 100px;
 }
@@ -300,21 +292,43 @@ body .wrap {
   padding: 0 4%;
 }
 
-.section-contents {
+.inner {
   position: relative;
 }
-.section-contents img {
-  width: 100%;
+.inner a {
   height: 560px;
-  -o-object-fit: cover;
-     object-fit: cover;
+}
+
+.main-image img {
+  width: 100%;
+}
+
+.section-contents {
+  position: absolute;
+  top: 58%;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 90%;
+  color: #fff;
+  font-style: normal;
+  font-family: "Noto Serif KR", serif;
+}
+.section-contents strong {
+  font-size: 40px;
+  font-weight: 700;
 }
 .section-contents p {
+  font-size: 16px;
+  font-weight: 400;
+}
+
+.section-contents .p {
   position: absolute;
-  top: 50%;
+  top: 90%;
   left: 50%;
   transform: translate(-50%, -50%);
-  font-size: 40px;
+  font-family: "Noto Serif KR", serif;
+  font-size: 16px;
   font-style: normal;
   font-weight: 700;
   width: 90%;
@@ -325,17 +339,21 @@ body .wrap {
   display: flex;
   justify-content: space-between;
 }
+#header .inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
 #header .logo1 {
-  padding-bottom: 5px;
   font-family: "Noto Serif KR", serif;
   font-weight: 900;
   font-size: 36px;
 }
 #header .lst-util {
   display: flex;
+  justify-content: space-between;
 }
 #header .lst-util .btn-g {
-  padding: 15px 0 0 10px;
   width: 31px;
   height: 64px;
 }
@@ -347,25 +365,29 @@ body .wrap {
   content: "\f002";
   font-weight: 900;
 }
-#header .gnb {
+
+.gnb {
   margin: 0 20px;
 }
-#header .gnb .depth1 {
+.gnb .depth1 {
   display: flex;
+  position: relative;
+  width: 100%;
   justify-content: space-between;
-  padding-bottom: 9.5px;
   font-size: 15px;
   font-weight: 400;
   font-family: "Noto Sans KR", sans-serif;
+  padding-bottom: 9.5px;
 }
-#header .gnb li {
+.gnb li {
   padding-right: 33.5px;
   padding-top: 11px;
 }
-#header .slide-wrap {
+
+.slide-wrap {
   display: block;
 }
-#header .slide-wrap img {
+.slide-wrap img {
   -o-object-fit: cover;
      object-fit: cover;
   -o-object-position: 50% 77%;
