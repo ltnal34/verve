@@ -30,30 +30,30 @@
     <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico" />
     <!-- icons -->
     <link
-    href="https://fonts.googleapis.com/css?family=Material+Icons|Material+Icons+Outlined|Material+Icons+Round"
-    rel="stylesheet"
+      href="https://fonts.googleapis.com/css?family=Material+Icons|Material+Icons+Outlined|Material+Icons+Round"
+      rel="stylesheet"
     />
 
     <!-- symbols -->
     <link
-    rel="stylesheet"
-    href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@NaN,0,0,0"
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@NaN,0,0,0"
     />
     <link
-    href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;300;400;500;700;900&display=swap"
-    rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;300;400;500;700;900&display=swap"
+      rel="stylesheet"
     />
     <link
-    href="https://fonts.googleapis.com/css2?family=Noto+Serif+KR:wght@400;500;600;700;900&display=swap"
-    rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Noto+Serif+KR:wght@400;500;600;700;900&display=swap"
+      rel="stylesheet"
     />
     <link
-    href="https://fonts.googleapis.com/css2?family=Gothic+A1:wght@300;400;500;600;700;900&display=swap"
-    rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Gothic+A1:wght@300;400;500;600;700;900&display=swap"
+      rel="stylesheet"
     />
     <link
-    rel="stylesheet"
-    href="https://maxst.icons8.com/vue-static/landings/line-awesome/font-awesome-line-awesome/css/all.min.css"
+      rel="stylesheet"
+      href="https://maxst.icons8.com/vue-static/landings/line-awesome/font-awesome-line-awesome/css/all.min.css"
     />
     <link
       rel="stylesheet"
@@ -64,8 +64,9 @@
       href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css"
     />
     <link rel="stylesheet" href="./dist/css/comm.css" />
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+    <!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script> -->
     <script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
+    <script defer src="./dist/js/include.js"></script>
     <script defer src="./dist/js/comm.js"></script>
   </head>
   <body>
@@ -75,41 +76,61 @@
       <a href="#footer"><span>풋터 바로가기</span></a>
     </div> -->
     <div class="wrap">
-      <header id="header" class="container">
-          <h1 id="logo1" class="logo1">
-            <a href="#">Verve</a>
-          </h1>
-          <div class="util">
-            <ul class="lst-util">
-              <li>
-                <button class="btn-g btn-search">
-                  <span class="blind">검색</span>
-                </button>
-              </li>
-              <li>
-                <button class="btn-g btn-bag">
-                  <span class="material-icons-outlined">shopping_bag</span>
-                  <span class="blind">장바구니</span>
-                </button>
-              </li>    
-            </ul>
-          </div>
-      </header>
-      <main id="main">
-        <!-- section 제목이 있는 그룹 -->
-        <section class=" section-g section-news">
-          <div class="inner">
-            <a href="#" class="main-image"><img src="./images/cel1.jpg" alt=""></a>
-            <div class="section-contents">
-              <strong> NEW SEASON
-                 EYEWEAR ITEM </strong>
-              <p>EYE WEAR ITEM</p>
-              <p>UP TO 10% SALE</p>
+      
+      <header data-include-path="./outline/header.html"></header>
+      <div class="swiper slide-intro">
+        <div class="swiper-wrapper">
+          <div class="swiper-slide">
+            <a href="#" class="main-image">
+              <img src="./images/cel1.jpg" alt="cel1"/>
+              <div class="section-main-txt">
+                <strong class="main-txt-tit"> NEW SEASON EYEWEAR ITEM </strong>
+                <p class="main-txt">EYE WEAR ITEM</p>
+                <p class="main-txt">UP TO 10% SALE</p>
               </div>
+            </a>
           </div>
-        </section>
-      </main>
-      <nav class="gnb">
+          <div class="swiper-slide">
+            <a href="#" class="main-image2">
+              <img src="./images/fall.png" alt="cel1"/>
+              <div class="section-main-txt">
+                <strong class="main-txt-tit"> NEW SEASON EYEWEAR ITEM </strong>
+                <p class="main-txt">EYE WEAR ITEM</p>
+                <p class="main-txt">UP TO 10% SALE</p>
+              </div>
+            </a>
+          </div>                  
+          <div class="swiper-slide">
+            <a href="#" class="main-image3">
+              <img src="./images/summer.png" alt="cel1"/>
+              <div class="section-main-txt">
+                <strong class="main-txt-tit"> NEW SEASON EYEWEAR ITEM </strong>
+                <p class="main-txt">EYE WEAR ITEM</p>
+                <p class="main-txt">UP TO 10% SALE</p>
+              </div>
+            </a>
+          </div>
+        </div>
+        <div class="swiper-button-next"></div>
+        <div class="swiper-button-prev"></div>
+        <div class="swiper-pagination"></div>
+      </div>
+      <script>
+        var swiper = new Swiper(".slide-intro", {
+          slidesPerView: 1,
+          spaceBetween: 30,
+          loop: true,
+          pagination: {
+            el: ".swiper-pagination",
+            clickable: true,
+          },
+          navigation: {
+            nextEl: ".swiper-button-next",
+            prevEl: ".swiper-button-prev",
+          },
+        });
+      </script>
+      <nav id="nav" class="gnb">
         <ul class="depth1">
           <li>
             <a href="#">NEW</a>
@@ -134,10 +155,82 @@
           </li>
         </ul>
       </nav>
-    </div> 
-
-   
-      
+      <main id="main" class="container">
+          
+          
+        
+        <div class="title">
+          <h2 class="contents-txt-tit">Men’s Trending Now</h2>
+        </div>
+        <div class="section-trending">
+          <a href="#" class="men-image">
+            <img src="./images/isa1.jpg" alt="men" />
+          </a>
+            <div class="contents-txt">              
+              <p>DESIGNERS TO KNOW</p>
+              <strong> ISABEL MARANT </strong>
+              <em>SHOP</em>
+            </div>
+        </div>
+        <!-- mens -->
+        <div class="title">
+          <h2 class="contents-txt-tit">Exclusive</h2>
+        </div>
+        <div class="section-exclusive">
+            <a href="#" class="bottega-image">
+              <img src="./images/botte1.png" alt="bottega" />
+            </a>
+            <div class="b-contents-txt">
+              <strong> BOTTEGA BENETTA </strong>
+              <p>Exclusive Item</p>
+            </div>
+        </div>
+        <!-- bottega -->
+        <div class="title">
+          <h2 class="contents-txt-tit">New Arrival</h2>
+        </div>
+        <div class="section-arrival">
+          <ul class="section-arrival-thumb">
+            <li>
+              <a href="#">
+                <img src="./images/new1.jpg" alt="new1">
+                <strong>SIENNE</strong>
+                <p>[CASUAL FESTA]</p>
+                <p>크로켓 가디건 (Beige)</p>
+                <strong>139,000￦</strong>
+              </a>
+            </li>
+            <li>
+              <a href="#">
+                <img src="./images/new2.jpg" alt="new2">
+                <strong>THE CENTAUR</strong>
+                <p>NYLON CENTAUR</p>
+                <p>BALL CAP</p>
+                <strong>90,000￦</strong>
+              </a>
+            </li>
+            <li>
+              <a href="#">
+                <img src="./images/new3.jpg" alt="new3">
+                <strong>EIGHT DAYS A WEEK</strong>
+                <p>[23SUMMER] </p>
+                <p>데님 스모크원피스 딥블루</p>
+                <strong>150,000￦</strong>
+              </a>
+            </li>
+            <li>
+              <a href="#">
+                <img src="./images/new4.jpg" alt="new4">
+                <strong>SIENNE</strong>
+                <p>[CASUAL FESTA] </p>
+                <p>플라워 가디건 (red)</p>
+                <strong>119,000￦</strong>
+              </a>
+            </li>
+          </ul>
+        </div>
+      </main>
+      <footer data-include-path="./outline/footer.html"></footer>
+    </div>
   </body>
 </html>
-
