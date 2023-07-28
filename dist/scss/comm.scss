@@ -44,9 +44,11 @@
 
 // nav
 .gnb {
+  z-index: 10;
   position: sticky;
   top: 0;
   margin: 0 2px;
+  background: #fff;
   .depth1 {
     display: flex;
     position: relative;
