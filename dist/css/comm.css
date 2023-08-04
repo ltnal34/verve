@@ -779,9 +779,6 @@ legend {
   font-weight: 300;
   color: #fff;
 }
-#gnb .depth2:hover {
-  background: #fff;
-}
 
 .navbar {
   overflow-x: auto;
