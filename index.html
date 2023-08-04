@@ -28,13 +28,32 @@
     />
     <meta name="twitter:domain" content="사이트 명" />
     <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico" />
+    <!-- icons -->
+    <link
+      href="https://fonts.googleapis.com/css?family=Material+Icons|Material+Icons+Outlined|Material+Icons+Round"
+      rel="stylesheet"
+    />
+
+    <!-- symbols -->
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0"
+    />
+    <!-- <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@NaN,0,0,0"
+    /> -->
     <link
       href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;300;400;500;700;900&display=swap"
       rel="stylesheet"
     />
     <link
+      href="https://fonts.googleapis.com/css2?family=Noto+Serif+KR:wght@400;500;600;700;900&display=swap"
       rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Gothic+A1:wght@300;400;500;600;700;900&display=swap"
+      rel="stylesheet"
     />
     <link
       rel="stylesheet"
@@ -42,12 +61,18 @@
     />
     <link
       rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    />
+    <link
+      rel="stylesheet"
       href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css"
     />
     <link rel="stylesheet" href="./dist/css/comm.css" />
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+    <!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script> -->
+
     <script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
-    <script src="./dist/js/include.js"></script>
+    <script defer src="./dist/js/include.js"></script>
+    <script src="./dist/js/youtube.js"></script>
     <script defer src="./dist/js/comm.js"></script>
   </head>
   <body>
@@ -57,31 +82,393 @@
       <a href="#footer"><span>풋터 바로가기</span></a>
     </div>
     <div class="wrap">
-      <header id="header" class="container">
-        <div class="inner">
-          <h1 id="logo">
-            <a href="#">logo</a>
-          </h1>
-          <div class="util">
-            <ul class="lst-util">
+      <header data-include-path="./outline/header.html"></header>
+      <div class="swiper slide-intro">
+        <div class="swiper-wrapper">
+          <div class="swiper-slide">
+            <a href="#" class="main-image">
+              <img src="./images/kendal.jpg" alt="kendal" />
+              <div class="section-main-txt">
+                <strong class="main-txt-tit"> NEW SEASON TOTE BAG </strong>
+                <p class="main-txt">23 AUTUMN 2ND DROP</p>
+                <p class="main-txt">UP TO 10% SALE</p>
+              </div>
+            </a>
+          </div>
+          <div class="swiper-slide">
+            <a href="#" class="main-image">
+              <img src="./images/prada.jpg" alt="cel1" />
+              <div class="section-main-txt">
+                <strong class="main-txt-tit">23 F/W COLLECTION</strong>
+                <p class="main-txt">READY TO WEAR</p>
+                <p class="main-txt">UP TO 10% SALE</p>
+              </div>
+            </a>
+          </div>
+          <div class="swiper-slide">
+            <a href="#" class="main-image">
+              <img src="./images/prada3.jpg" alt="cel1" />
+              <div class="section-main-txt">
+                <strong class="main-txt-tit"> MENS NEW ESSENTIAL </strong>
+                <p class="main-txt">READY TO WEAR</p>
+                <p class="main-txt">SHOES AND BAG</p>
+              </div>
+            </a>
+          </div>
+        </div>
+        <div class="swiper-pagination"></div>
+      </div>
+      <script>
+        var swiper = new Swiper(".slide-intro", {
+          slidesPerView: 1,
+          spaceBetween: 30,
+          loop: true,
+          pagination: {
+            el: ".swiper-pagination",
+            clickable: true,
+          },
+          navigation: {
+            nextEl: ".swiper-button-next",
+            prevEl: ".swiper-button-prev",
+          },
+        });
+      </script>
+      <!-- nav -->
+
+      <nav id="bottommenu" class="bottom-menu-v2">
+        <a href="#search" class="search">
+          <span class="material-symbols-outlined">search</span>
+          <span class="blind">검색</span>
+        </a>
+        <a href="#favorite" class="favorite">
+          <span class="material-symbols-outlined">favorite</span>
+          <span class="blind">찜</span>
+        </a>
+        <a href="#home" class="home">
+          <span class="material-symbols-outlined">home</span>
+          <span class="blind">홈</span>
+        </a>
+        <a href="#bell" class="bell">
+          <span class="material-symbols-outlined">notifications</span>
+          <span class="blind">알림</span>
+        </a>
+        <a href="#mypage" class="mypage">
+          <span class="material-symbols-outlined">account_circle</span>
+          <span class="blind">마이페이지</span>
+        </a>
+      </nav>
+      <main id="main" class="container">
+        <nav id="nav" class="navbar">
+          <ul class="depth1">
+            <li>
+              <a href="#">NEW</a>
+            </li>
+            <li>
+              <a href="#">BEST</a>
+            </li>
+            <li>
+              <a href="#">WOMEN</a>
+            </li>
+            <li>
+              <a href="#">MEN</a>
+            </li>
+            <li>
+              <a href="#">SHOES</a>
+            </li>
+            <li>
+              <a href="#">NEW</a>
+            </li>
+            <li>
+              <a href="#">BEST</a>
+            </li>
+            <li>
+              <a href="#">WOMEN</a>
+            </li>
+            <li>
+              <a href="#">MEN</a>
+            </li>
+            <li>
+              <a href="#">SHOES</a>
+            </li>
+          </ul>
+        </nav>
+        <section class="section-trending">
+          <h2 class="contents-txt-tit">Men’s Trending Now</h2>
+          <div class="cont-trending">
+            <a href="#" class="men-image">
+              <img src="./images/isa.jpg" alt="men" />
+            </a>
+            <div class="contents-txt">
+              <p>DESIGNERS TO KNOW</p>
+              <strong> ISABEL MARANT </strong>
+              <em>SHOP</em>
+            </div>
+          </div>
+        </section>
+        <!-- mens trending now-->
+        <section class="section-exclusive">
+          <h2 class="contents-txt-tit">Exclusive</h2>
+          <div class="cont-exclusive">
+            <a href="#" class="bottega-image">
+              <img src="./images/botte1.png" alt="bottega" />
+            </a>
+            <div class="b-contents-txt">
+              <strong> BOTTEGA BENETTA </strong>
+              <p>Exclusive Item</p>
+            </div>
+          </div>
+        </section>
+        <!-- Exclusive -->
+        <section class="section-Arrival">
+          <h2 class="contents-txt-tit">New Arrival</h2>
+          <div class="section-arrival">
+            <ul class="section-arrival-thumb">
               <li>
-                <!-- a : 링크 연결 / button : 동작처리 -->
-                <button class="btn-g btn-search">
-                  <span class="blind">검색</span>
-                </button>
+                <a href="#">
+                  <img src="./images/new1.jpg" alt="new1" />
+                  <strong>SIENNE</strong>
+                  <p>[CASUAL FESTA]</p>
+                  <p>크로켓 가디건 (Beige)</p>
+                  <strong>139,000￦</strong>
+                </a>
               </li>
               <li>
-                <button class="btn-g btn-burger">
-                  <span class="blind">마이페이지</span>
-                </button>
+                <a href="#">
+                  <img src="./images/new2.jpg" alt="new2" />
+                  <strong>THE CENTAUR</strong>
+                  <p>NYLON CENTAUR</p>
+                  <p>BALL CAP</p>
+                  <strong>90,000￦</strong>
+                </a>
+              </li>
+              <li>
+                <a href="#">
+                  <img src="./images/new3.jpg" alt="new3" />
+                  <strong>EIGHT DAYS A WEEK</strong>
+                  <p>[23SUMMER]</p>
+                  <p>데님 스모크원피스 딥블루</p>
+                  <strong>150,000￦</strong>
+                </a>
+              </li>
+              <li>
+                <a href="#">
+                  <img src="./images/new4.jpg" alt="new4" />
+                  <strong>SIENNE</strong>
+                  <p>[CASUAL FESTA]</p>
+                  <p>플라워 가디건 (red)</p>
+                  <strong>119,000￦</strong>
+                </a>
               </li>
             </ul>
           </div>
+        </section>
+        <!-- new arrival -->
+        <!-- brandfocus marc-->
+        <section class="section-brandfocus">
+          <h2 class="contents-txt-tit">Brand Focus</h2>
+          <div class="cont-brandfocus">
+            <a href="#" class="brand1">
+              <img src="./images/marc.jpg" alt="gg1" />
+            </a>
+            <div class="c-contents-txt">
+              <strong>MARC JACOBS</strong>
+              <p>Spring23 with Kendall Jenner</p>
+            </div>
+          </div>
+          <ul class="marc">
+            <li>
+              <a href="#">
+                <img src="./images/mshoes.jpg" alt="mshoes" />
+              </a>
+              <span class="list-txt">MELISSA X MARC JACOBS CLOG</span>
+              <span class="list-price">508,000￦</span>
+            </li>
+            <li>
+              <a href="#">
+                <img src="./images/mhat.jpg" alt="mhat" />
+              </a>
+              <span class="list-txt">THE WASHED BASEBALL CAP</span>
+              <span class="list-price">508,000￦</span>
+            </li>
+            <li>
+              <a href="#">
+                <img src="./images/mbag.jpg" alt="mbag" />
+              </a>
+              <span class="list-txt">MELISSA X MARC JACOBS CLOG</span>
+              <span class="list-price">508,000￦</span>
+            </li>
+          </ul>
+          <div class="section-brandfocus2">
+            <a href="#" class="prada4">
+              <img src="/images/prada4.jpg" alt="prada4" />
+            </a>
+            <div class="c-contents-txt2">
+              <strong>PRADA</strong>
+              <p>A study of summer classic items</p>
+            </div>
+          </div>
+          <ul class="pra">
+            <li>
+              <a href="#">
+                <img src="./images/pra1.jpg" alt="pra1" />
+              </a>
+              <span class="list-txt">Prada 로고 자수 우븐 버킷 햇</span>
+              <span class="list-price">1,090,000₩</span>
+            </li>
+            <li>
+              <a href="#">
+                <img src="./images/pra2.jpg" alt="pra2" />
+              </a>
+              <span class="list-txt">Prada 샴브레이 반소매 셔츠</span>
+              <span class="list-price">1,620,000₩</span>
+            </li>
+            <li>
+              <a href="#">
+                <img src="./images/pra3.jpg" alt="pra3" />
+              </a>
+              <span class="list-txt">Prada 플로럴 프린트 반소매 셔츠</span>
+              <span class="list-price">1,650,000₩</span>
+            </li>
+          </ul>
+        </section>
+        <!-- brand focus -->
+        <section class="section-pre-open">
+          <h2 class="contents-txt-tit">Pre-Open Festival</h2>
+          <div class="section-arrival">
+            <ul class="section-arrival-thumb">
+              <li>
+                <a href="#">
+                  <img src="./images/the1.jpg" alt="the1" />
+                  <strong>THETIS</strong>
+                  <p>[클리어런스 세일]</p>
+                  <p>STRAP CABLE SUMMER SLEEVELESS KNIT</p>
+                  <strong>119,000￦</strong>
+                </a>
+              </li>
+              <li>
+                <a href="#">
+                  <img src="./images/the2.jpg" alt="the2" />
+                  <strong>THETIS</strong>
+                  <p>[클리어런스 세일]</p>
+                  <p>HANDMADE HALTER SLEEVELESS KNIT</p>
+                  <strong>159,000￦</strong>
+                </a>
+              </li>
+              <li>
+                <a href="#">
+                  <img src="./images/the3.jpg" alt="the3" />
+                  <strong>THETIS</strong>
+                  <p>SEE-THROUGH KNEE SOCKS</p>
+                  <p>_TT3S706IV</p>
+                  <strong>59,000￦</strong>
+                </a>
+              </li>
+              <li>
+                <a href="#">
+                  <img src="./images/the4.jpg" alt="the4" />
+                  <strong>THETIS</strong>
+                  <p>[23SPRING]</p>
+                  <p>SPANGLE PLAIN SHORTS_TT3S405SL</p>
+                  <strong>159,000￦</strong>
+                </a>
+              </li>
+            </ul>
+          </div>
+        </section>
+        <section class="coupon">
+          <a href="#">
+            <img src="./images/coupon.jpg" alt="coupon" />
+          </a>
+        </section>
+        <section class="section-fashion show">
+          <h2 class="contents-txt-tit">2024 FASHION SHOW</h2>
+          <div class="fashion-show">
+            <a href="#" class="lvshow">
+              <img src="./images/lvshow.jpg" alt="lvshow" />
+            </a>
+          </div>
+          <div class="title">
+            <h2 class="contents-txt-tit">
+              Louis Vuitton Men’s Spring-Summer 2024
+            </h2>
+            <p>Fashion Show by Pharrell Williams</p>
+            <br />
+          </div>
+        </section>
+        <section class="youtube">
+          <div class="youtube__area">
+            <div id="player"></div>
+          </div>
+          <div class="youtube__cover"></div>
+        </section>
+
+        <section class="section-lookbook">
+          <div class="title">
+            <h2 class="contents-txt-tit">LOOK BOOK</h2>
+          </div>
+          <ul class="section-lookbook">
+            <li>
+              <a href="#">
+                <img src="./images/look1.jpg" alt="look1" />
+              </a>
+            </li>
+            <li>
+              <a href="#">
+                <img src="./images/look2.jpg" alt="look2" />
+              </a>
+            </li>
+            <li>
+              <a href="#">
+                <img src="./images/look3.jpg" alt="look3" />
+              </a>
+            </li>
+            <li>
+              <a href="#">
+                <img src="./images/look4.jpg" alt="look4" />
+              </a>
+            </li>
+          </ul>
+        </section>
+      </main>
+      <footer>
+        <div class="category2 container">
+          <ul class="depth2">
+            <li>
+              <a href="#">로그인</a>
+            </li>
+            <li>
+              <a href="#">고객센터</a>
+            </li>
+            <li>
+              <a href="#">회사소개</a>
+            </li>
+            <li>
+              <a href="#">이용약관</a>
+            </li>
+            <li>
+              <a href="#">개인정보처리방침</a>
+            </li>
+          </ul>
         </div>
-      </header>
-      <div class="slide-wrap slide-name">slide</div>
-      <main id="main" class="container">컨텐츠</main>
-      <footer id="footer" class="container">풋터</footer>
+        <div class="footer1 container">
+          <p>
+            (주)LF 대표이사 오규식, 온라인사업총괄 도한준 사업자 등록번호 :
+            211-87-87724 대표전화: 1544-5114 통신판매업신고 : 제
+            2010-서울강남-00066호
+          </p>
+        </div>
+        <div class="footer-right container">
+          <a href="#">
+            <img src="./images/youtubeimg.jpg" alt="youtubeimg" />
+          </a>
+          <a href="#">
+            <img src="./images/Facebook.jpg" alt="youtubeimg" />
+          </a>
+          <a href="#">
+            <img src="./images/Instagram.jpg" alt="youtubeimg" />
+          </a>
+        </div>
+      </footer>
     </div>
   </body>
 </html>
